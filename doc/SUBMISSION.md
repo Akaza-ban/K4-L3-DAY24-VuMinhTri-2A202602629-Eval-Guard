@@ -1,4 +1,4 @@
-# Nộp bài K4 Track 3B
+# Nộp bài K4 Track 3A
 
 **Bài nhóm: một repo chung của trưởng nhóm, một link nộp.**
 

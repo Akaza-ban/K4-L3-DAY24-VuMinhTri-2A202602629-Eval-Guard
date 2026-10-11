@@ -1,4 +1,4 @@
-# Môi trường K4 Track 3B
+# Môi trường K4 Track 3A
 
 ## Phiên bản mục tiêu và cách kiểm tra
 
