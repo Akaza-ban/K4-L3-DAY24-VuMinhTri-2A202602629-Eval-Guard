@@ -153,6 +153,5 @@ và phép tính; thiếu/sai generation_mode, pair_sources hoặc metadata đề
 Integration tests là lựa chọn thay cho chạy batch B/C riêng, không chạy cả hai
 để tránh trả phí hai lần: `python -m pytest -m integration --run-live`.
 
-Nộp qua kênh coach công bố. Deadline mặc định là
-**23:59 ngày diễn ra lab, Asia/Ho_Chi_Minh (UTC+07:00)**; áp dụng điều chỉnh của
-key coach trong 48 giờ sau lab theo quy ước chung.
+Nộp link qua vlearn. Deadline mặc định là
+**23:59 ngày diễn ra lab**
