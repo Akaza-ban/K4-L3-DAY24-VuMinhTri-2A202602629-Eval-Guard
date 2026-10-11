@@ -56,8 +56,7 @@ attacks**, kèm clean controls đạt, là điều kiện bonus Phase C.
 
 ## Cuối bài phải nộp những gì?
 
-**Trưởng nhóm nộp một link repo GitHub chung kèm commit dùng để chấm.** Thành viên
-không nộp repo riêng. Repo phải chứa đủ các phần sau, không chỉ source code:
+**Tất cả thành viên nhóm nộp một link repo GitHub chung. Ai cũng phải có commit, dùng để chấm sau này.** . Repo phải chứa đủ các phần sau, không chỉ source code:
 
 - **Mã nguồn:** năm module RAG m1–m5 của nhóm và ba module `src/phase_*.py`
   đã hoàn thiện; giữ scripts, tests, fixtures, corpus và cấu hình của starter.
