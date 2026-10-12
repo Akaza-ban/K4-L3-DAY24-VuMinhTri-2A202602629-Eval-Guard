@@ -2,7 +2,7 @@
 
 Tên nhóm: K4-L3-DAY24-VuMinhTri-Eval-Guard
 
-Repo chung: https://github.com/VinUni-AI20k/K4-Track-3A-Day24-Eval-Guard
+Repo chung: https://github.com/Akaza-ban/K4-L3-DAY24-VuMinhTri-2A202602629-Eval-Guard
 
 Trưởng nhóm/người nộp: Vũ Minh Trí - MSSV 2A202602629
 
