@@ -13,6 +13,10 @@ from src.experiment_runners import run_phase_a, run_phase_b, run_phase_c
 
 
 def main(argv=None):
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="RAG eval/guard experiments (paid API, network required)")
     parser.add_argument("--phase", choices=("a", "b", "c", "all"), required=True)
     parser.add_argument("--live", action="store_true", help="Acknowledge API use and network dependency")

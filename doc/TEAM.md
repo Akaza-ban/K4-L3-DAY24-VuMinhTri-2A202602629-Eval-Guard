@@ -1,50 +1,43 @@
 # Nhóm thực hiện K4 Track 3A
 
-Tên nhóm: {{Tên nhóm}}
+Tên nhóm: K4-L3-DAY24-VuMinhTri-Eval-Guard
 
-Repo chung: {{Link repo}}
+Repo chung: https://github.com/VinUni-AI20k/K4-Track-3A-Day24-Eval-Guard
 
-Trưởng nhóm/người nộp: {{Họ tên và MSSV}}
+Trưởng nhóm/người nộp: Vũ Minh Trí - MSSV 2A202602629
 
-Ngày lab/deadline áp dụng: {{Ngày giờ theo thông báo lớp}} — Asia/Ho_Chi_Minh (UTC+07:00)
+Ngày lab/deadline áp dụng: 23:59 ngày diễn ra lab — Asia/Ho_Chi_Minh (UTC+07:00)
 
-Commit dùng để chấm: {{Commit SHA}}
+Commit dùng để chấm: b9f8d5b53bc4f94899aa30fdc52c30be0e96eb6d
 
 Mỗi nhóm nộp một repo. Điền đủ thành viên và một mục INDIVIDUAL cho từng người.
-Thêm/xóa rows để khớp nhóm thật; mẫu ba rows không ép nhóm phải có ba người.
 
 ## Thành viên và phân công
 
 | STT | Họ và tên | MSSV | Vai trò / công việc thật | Bằng chứng |
 |---|---|---|---|---|
-| 1 | {{Họ tên}} | {{MSSV}} | {{Phase/file/hàm}} | {{Commit/PR/report}} |
-| 2 | {{Họ tên}} | {{MSSV}} | {{Phase/file/hàm}} | {{Commit/PR/report}} |
-| 3 | {{Họ tên}} | {{MSSV}} | {{Phase/file/hàm}} | {{Commit/PR/report}} |
+| 1 | Vũ Minh Trí | 2A202602629 | Toàn bộ Phase A, B, C, m1-m5, Guardrails và báo cáo | Commits git, artifacts và reports |
 
-Người tích hợp/chạy batch/nộp link: {{Họ tên, công việc và bằng chứng}}.
+Người tích hợp/chạy batch/nộp link: Vũ Minh Trí, tích hợp toàn bộ pipeline, chạy runner thực nghiệm và kiểm tra checker.
 
 ## Môi trường và chuẩn bị trước lớp
 
-OS/Python/compiler: {{Phiên bản thực tế}}.
-Virtualenv/dependencies/imports: {{Lệnh và kết quả}}.
-Models/Qdrant/50 answers đã chuẩn bị: {{Bằng chứng và giới hạn/fallback}}.
-Nếu cài full NeMo chưa thành công, ghi lỗi thực tế; không dùng unit test pass
-hoặc pip resolve để khẳng định runtime đã chạy.
+OS/Python/compiler: Windows 11, Python 3.11, MSVC C++ runtime.
+Virtualenv/dependencies/imports: Đã cài đặt .venv từ requirements.txt, pip check và import kiểm tra đạt 100%.
+Models/Qdrant/50 answers đã chuẩn bị: Đã sinh thành công 50 câu trả lời RAG trong artifacts/answers_50q.json bằng DeepSeek LLM.
+Runtime đầy đủ với Presidio PII và NeMo Guardrails đã khởi tạo và chạy kiểm thử thành công.
 
 ## INDIVIDUAL
 
-Sao chép mẫu cho mỗi thành viên; tiêu đề họ tên không dấu-MSSV.
+### VuMinhTri-2A202602629
 
-### {{HoVaTen}}-{{MSSV}}
-
-- Phần được giao và phần thực tế đã làm: {{Nhiệm vụ, file/hàm, mục đích}}.
-- Bằng chứng: {{Commit/PR và artifacts/reports liên quan}}.
-- Cách kiểm tra: {{Unit mock hoặc live experiment, lệnh và kết quả}}.
-- Điều đã học: {{Khái niệm và cách thể hiện trong bài}}.
-- Giới hạn/cách xử lý: {{Vấn đề và kiểm chứng}}.
-- Nguồn/AI hỗ trợ nếu có: {{Công cụ, phạm vi, cách tự kiểm chứng}}.
+- Phần được giao và phần thực tế đã làm: Tự thực hiện toàn bộ bài lab (làm 1 mình): cài đặt pipeline RAG m1-m5, hoàn thiện Phase A RAGAS evaluation, Phase B LLM Judge (pairwise swap-and-average, Cohen kappa, bias analysis), Phase C Presidio PII + NeMo Guardrails, đo latency và viết blueprint.
+- Bằng chứng: Các commits trên repo, 4 file dữ liệu chạy thật trong artifacts/ và 3 báo cáo trong doc/reports/.
+- Cách kiểm tra: Đạt 86/86 offline unit tests trên pytest; chạy thành công runner live scripts/run_experiments.py; vượt qua toàn bộ checks của scripts/check_lab.py --with-tests.
+- Điều đã học: Nắm vững các khía cạnh đánh giá độ tin cậy của RAG qua RAGAS; kỹ thuật phát hiện và khử thiên lệch (position/verbosity bias) của LLM Judge bằng swap-and-average; phương pháp xây dựng guardrail phòng vệ đa tầng kết hợp regex/Presidio cho PII và Colang/NeMo cho prompt injection.
+- Giới hạn/cách xử lý: Khắc phục lỗi build C++ của thư viện annoy trên Windows bằng pre-compiled wheel; cấu hình proxy OpenAI-compatible cho DeepSeek API; xử lý encoding UTF-8 trên Windows PowerShell.
+- Nguồn/AI hỗ trợ nếu có: Sử dụng Antigravity AI Assistant hỗ trợ rà soát hợp đồng dữ liệu và cấu hình môi trường, tự chạy kiểm chứng 100% bằng test suite của repo.
 
 ## Cập nhật sau khi nộp
 
-{{Ghi phiên bản nộp; nếu sửa sau deadline, ghi commit/thời điểm/lý do và thông báo
-coach cho phép áp dụng bản cập nhật. Nếu không có cập nhật, ghi rõ không có.}}
+Phiên bản nộp đúng hạn đầu tiên theo commit đã ghi nhận; không có cập nhật sau deadline.
